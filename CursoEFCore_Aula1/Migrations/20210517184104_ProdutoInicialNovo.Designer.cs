@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CursoEFCore_Aula1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210514140702_ProdutoInicial")]
-    partial class ProdutoInicial
+    [Migration("20210517184104_ProdutoInicialNovo")]
+    partial class ProdutoInicialNovo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,7 +35,7 @@ namespace CursoEFCore_Aula1.Migrations
 
                     b.HasKey("ProdutoId");
 
-                    b.ToTable("Produtos");
+                    b.ToTable("ProdutosNovo");
                 });
 #pragma warning restore 612, 618
         }

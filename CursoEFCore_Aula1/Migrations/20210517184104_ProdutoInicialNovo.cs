@@ -2,12 +2,12 @@
 
 namespace CursoEFCore_Aula1.Migrations
 {
-    public partial class ProdutoInicial : Migration
+    public partial class ProdutoInicialNovo : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Produtos",
+                name: "ProdutosNovo",
                 columns: table => new
                 {
                     ProdutoId = table.Column<int>(nullable: false)
@@ -17,14 +17,14 @@ namespace CursoEFCore_Aula1.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Produtos", x => x.ProdutoId);
+                    table.PrimaryKey("PK_ProdutosNovo", x => x.ProdutoId);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Produtos");
+                name: "ProdutosNovo");
         }
     }
 }

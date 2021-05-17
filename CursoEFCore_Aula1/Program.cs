@@ -14,12 +14,11 @@ namespace CursoEFCore_Aula1 {
 
     class AppDbContext : DbContext {
         //mapeamento da entidade para a tabela
-        public DbSet<Produto> Produtos{ get; set; } //a tabela vai ter o nome de "Produtos"
+        public DbSet<Produto> ProdutosNovo { get; set; } //a tabela vai ter o nome de "Produtos"
 
         //O Provedor e a string de conexão
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-8024PRG;" +
-                " Initial Catalog=Aula1DB; Integrated Security = True");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-8024PRG\SERVIDOR;Initial Catalog=Aula1DBNovo;Integrated Security=True");
         }
 
     }
